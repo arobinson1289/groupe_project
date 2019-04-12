@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,75 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Title</title>
 </head>
+
 <body>
-    <h1>Andrews Branch</h1>
+  <div class="container">
+    <header class="jumbotron">
+        <h1>Dirty Bird Lyrics Dictionary</h1>
+    </header>
+    
+    <!-- Instructions -->
+    <p class="text-center">Search For Your Favorite Song To Receive Song Lyrics, and use our Dirty Bird search engine to look up dirty words you find!</p>
 
-  <div class="row">
-    <div id="button" class="col-2"></div>
-    <div id="lyrics" class="col-6"></div>
-    <div id="definitions" class="col-4"></div>
+    <hr>
 
+    <!-- Search Forms -->
+    <div class="row">
+
+      <!-- Song Search Form -->
+      <div class="col-8">
+        <div class="card cardStyling">
+          <form id="song-search-form">
+            <div class="form-group">
+              <label for="songInput">Search By Song</label>
+              <input id="songInput" class="form-control" type="text">
+            </div>
+            <button type="submit" class="btn btn-primary" id="songSearchButton">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Urban Dictionary Search Form -->
+      <div class="col-4">
+        <div class="card cardStyling">
+          <form id="dirty-word-form">
+            <div class="form-group">
+              <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
+              <input id="dirtyWordInput" class="form-control" type="text"></input>
+            </div>
+            <button type="submit" class="btn btn-primary" id="dirtyWordSearchButton">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lyrics and Search Term Results -->
+    <div class="row">
+      <!-- Song Buttons Column -->
+      <div class="col-3">
+        <div id="song-buttons"></div>
+      </div>
+
+      <!-- Lyrics Column -->
+      <div class="col-5">
+        <div id="lyrics"></div>
+      </div>
+
+      <!-- Definitions Column -->
+      <div class="col-4">
+        <div id="definitions"></div>
+      </div>
+    </div>
+    
   </div>
+  
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="assets/js/ap.js"></script>
 </body>
+
 </html>

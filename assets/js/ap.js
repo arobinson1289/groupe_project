@@ -48,41 +48,46 @@ $.ajax({
 });
 
 //ajax call for musixmatch song title
-var song = "6 foot 7 foot";
+$("#songSearchButton").on("click",  function(event) {
+  event.preventDefault();
 
-var apiKey = "f64fe601571e8c26f4b0845395793cff";
-
-var queryUrl = "https://alex-rosencors.herokuapp.com?url=https://api.musixmatch.com/ws/1.1/track.search?q_track=" + song + "&s_track_rating=desc&page_size=25&apikey=" + apiKey
-
-console.log(queryUrl)
-
-$.ajax ({
-  url: queryUrl,
-  method: "GET"
-}).then(function(response){
-
-  console.log(response)
-
-  var trackList = response.message.body.track_list;
-  console.log(trackList)
-
-  for (var i = 0; i < trackList.length; i++){
-    var $songBtn = $("<button>")
-      .addClass("btn btn-primary col-12 mb-1 song-button")
-      .attr("data-trackId", trackList[i].track.track_id)
-    
-    var $songName = $("<p>")
-      .addClass("m-0")
-      .text(`"${trackList[i].track.track_name}"`)
+  var song = $("#songInput").val();
+  
+  var apiKey = "f64fe601571e8c26f4b0845395793cff";
+  
+  var queryURL = "https://alex-rosencors.herokuapp.com?url=https://api.musixmatch.com/ws/1.1/track.search?q_track=" + song + "&s_track_rating=desc&page_size=25&apikey=" + apiKey
+  
+  console.log(queryURL);
+  
+  $.ajax ({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response){
+  
+    console.log(response)
+  
+    var trackList = response.message.body.track_list;
+    console.log(trackList)
+  
+    for (var i = 0; i < trackList.length; i++){
+      var $songBtn = $("<button>")
+        .addClass("btn btn-primary col-12 mb-1 song-button")
+        .attr("data-trackId", trackList[i].track.track_id)
       
-    var $artistName = $("<p>")
-      .addClass("m-0")
-      .text(trackList[i].track.artist_name)
+      var $songName = $("<p>")
+        .addClass("m-0")
+        .text(`"${trackList[i].track.track_name}"`)
+        
+      var $artistName = $("<p>")
+        .addClass("m-0")
+        .text(trackList[i].track.artist_name)
+  
+      $songBtn.append($songName, $artistName)
+      $("#song-buttons").append($songBtn)
+  
+    };
 
-    $songBtn.append($songName, $artistName)
-    $("#button").append($songBtn)
-
-  }
+  });
 
 });
 
