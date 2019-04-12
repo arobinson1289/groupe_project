@@ -58,15 +58,14 @@ $("#songSearchButton").on("click",  function(event) {
   event.preventDefault();
 
   var song = $("#songInput").val();
-  
+
+
   var apiKey = "f64fe601571e8c26f4b0845395793cff";
   
   var queryURL = "https://alex-rosencors.herokuapp.com?url=https://api.musixmatch.com/ws/1.1/track.search?q_track=" + song + "&s_track_rating=desc&page_size=15&apikey=" + apiKey
   
   console.log(queryURL);
 
-  var $header = $("<h2>").text("Select A Song").prependTo($("#songs"))
-  
   $.ajax ({
     url: queryURL,
     method: "GET"
@@ -76,7 +75,12 @@ $("#songSearchButton").on("click",  function(event) {
   
     var trackList = response.message.body.track_list;
     console.log(trackList)
-  
+
+    var $header = $("<h4>")
+      .addClass("mt-4")
+      .text("Select A Song")
+      .appendTo($("#song-buttons"));
+
     for (var i = 0; i < trackList.length; i++){
       var $songBtn = $("<button>")
         .addClass("btn btn-link col-12 mb-1 song-button")
@@ -109,8 +113,6 @@ $(document).on("click", ".song-button", function(event) {
   event.preventDefault();
 
   $("#lyrics").empty()
-
-  var $header = $("<h2>").text("Lyrics:").prependTo($(".lyrics"))
 
   var trackId = $(this).attr("data-trackId");
   console.log(trackId)

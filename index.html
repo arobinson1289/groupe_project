@@ -16,19 +16,6 @@
   <header class="jumbotron">
     <h1>Dirty Bird Lyrics Dictionary</h1>
     <p class="text-center text-muted">Search For Your Favorite Song To Receive Song Lyrics, and use our Dirty Bird search engine to look up dirty words you find!</p>
-    <form id="song-search-form">
-      <div class="form-row">
-        <div class="col">
-          <label for="songInput">Search By Song</label>
-        </div>
-        <div class="col">
-          <input id="songInput" class="form-control col-12" type="text">
-        </div>
-        <div class="col">
-          <button type="submit" class="btn btn-primary" id="songSearchButton">Search</button>
-        </div>
-      </div>
-    </form>
   </header>
     
   <div class="pagewrapper mx-5">
@@ -36,12 +23,21 @@
     <div class="row">
 
       <!-- Song Buttons -->
-      <div id="songs" class="col-2 text-center">
+      <div class="col-3">
+        <h2>Song Search</h2>
+        <form id="song-search-form" class="col-12 p-0">
+          <div class="form-group">
+            <label for="songInput">Search By Song</label>
+            <input id="songInput" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn btn-primary col-12" id="songSearchButton">Search</button>
+        </form>
         <div id="song-buttons"></div>
       </div>
 
       <!-- Lyrics -->
-      <div class="col-6 lyrics">
+      <div class="col-5">
+        <h2>Lyrics</h2>
         <h4 id="lyrics" class="text-justify"></h4>
       </div>
 
