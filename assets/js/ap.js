@@ -4,11 +4,9 @@
 $("#dirtyWordSearchButton").on("click", function(event) {
   event.preventDefault();
 
-  // Clear everything
-  $("#definitions").empty();
-  $("#dirtyWordInput").val("");
-
   var word = $("#dirtyWordInput").val();
+  
+  $("#term").text(`"${word}"`);
   
   var queryURL = "https://alex-rosencors.herokuapp.com?url=https://urbanscraper.herokuapp.com/search/" + word;
   
@@ -23,15 +21,10 @@ $("#dirtyWordSearchButton").on("click", function(event) {
       
       // create a definition div
       $definitionCard = $("<div>")
-        .addClass("card")
+        .addClass("card mb-3")
   
       $cardBody = $("<div>")
         .addClass("card-body")
-  
-      // grab term
-      $term = $("<h4>")
-        .addClass("card-title")
-        .text(word)
   
       // grab the definition
       var $definition = $("<h5>")
@@ -44,7 +37,7 @@ $("#dirtyWordSearchButton").on("click", function(event) {
         .text("Example: " + response[i].example);
   
       // append to $definitionDiv
-      $definitionCard.append($term, $definition, $example);
+      $definitionCard.append($definition, $example);
   
       // append $definitionDiv to page
       $("#definitions").append($definitionCard);
@@ -53,15 +46,15 @@ $("#dirtyWordSearchButton").on("click", function(event) {
   
   });
 
+  // Clear everything
+  $("#definitions").empty();
+  $("#dirtyWordInput").val("");
+
 })
 
 //ajax call for musixmatch song title
 $("#songSearchButton").on("click",  function(event) {
   event.preventDefault();
-
-  // Clear everything
-  $("#song-buttons").empty();
-  $("#songInput").val("");
 
   var song = $("#songInput").val();
   
@@ -100,6 +93,11 @@ $("#songSearchButton").on("click",  function(event) {
     };
 
   });
+
+  // Clear everything
+  $("#song-buttons").empty();
+  $("#songInput").val("");
+  $("#lyrics").empty();
 
 });
 
