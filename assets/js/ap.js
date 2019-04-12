@@ -1,55 +1,67 @@
 // URBAN DICTIONARY AJAX CALL
 
-// pull search input from urban dictionary form 
-var search = "hit a lick";
+// pull search input from urban dictionary form
+$("#dirtyWordSearchButton").on("click", function(event) {
+  event.preventDefault();
 
-var queryURL = "https://alex-rosencors.herokuapp.com?url=https://urbanscraper.herokuapp.com/search/" + search;
+  // Clear everything
+  $("#definitions").empty();
+  $("#dirtyWordInput").val("");
 
-$.ajax({
-  url: queryURL,
-  method: "GET"
-}).then(function(response) {
-  console.log(response)
+  var word = $("#dirtyWordInput").val();
+  
+  var queryURL = "https://alex-rosencors.herokuapp.com?url=https://urbanscraper.herokuapp.com/search/" + word;
+  
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(function(response) {
+    console.log(response)
+  
+    // Loop through response array
+    for (var i = 0; i < response.length; i++) {
+      
+      // create a definition div
+      $definitionCard = $("<div>")
+        .addClass("card")
+  
+      $cardBody = $("<div>")
+        .addClass("card-body")
+  
+      // grab term
+      $term = $("<h4>")
+        .addClass("card-title")
+        .text(word)
+  
+      // grab the definition
+      var $definition = $("<h5>")
+        .addClass("card-subtitle definition")
+        .text((i + 1) + ")   Definition: " + response[i].definition);
+  
+      // grab example
+      var $example = $("<p>")
+        .addClass("card-text example")
+        .text("Example: " + response[i].example);
+  
+      // append to $definitionDiv
+      $definitionCard.append($term, $definition, $example);
+  
+      // append $definitionDiv to page
+      $("#definitions").append($definitionCard);
+  
+    };
+  
+  });
 
-  // Loop through response array
-  for (var i = 0; i < response.length; i++) {
-    
-    // create a definition div
-    $definitionCard = $("<div>")
-      .addClass("card")
-
-    $cardBody = $("<div>")
-      .addClass("card-body")
-
-    // grab term
-    $term = $("<h4>")
-      .addClass("card-title")
-      .text(search)
-
-    // grab the definition
-    var $definition = $("<h5>")
-      .addClass("card-subtitle definition")
-      .text((i + 1) + ")   Definition: " + response[i].definition);
-
-    // grab example
-    var $example = $("<p>")
-      .addClass("card-text example")
-      .text("Example: " + response[i].example);
-
-    // append to $definitionDiv
-    $definitionCard.append($term, $definition, $example);
-
-    // append $definitionDiv to page
-    $("#definitions").append($definitionCard);
-
-
-  };
-
-});
+})
 
 //ajax call for musixmatch song title
 $("#songSearchButton").on("click",  function(event) {
   event.preventDefault();
+
+  // Clear everything
+  $("#song-buttons").empty();
+  $("#songInput").val("");
 
   var song = $("#songInput").val();
   
