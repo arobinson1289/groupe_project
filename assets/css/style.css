@@ -65,7 +65,16 @@ body{
 }
 
 .song-button {
+<<<<<<< HEAD
   border-bottom: 1px solid gray
+=======
+    border-bottom: 1px solid gray;
+    color: #76B3A6;
+}
+
+.song-button:hover {
+    color: #AF6DB3;
+>>>>>>> 9a313e819c30ce328debdeee99d46acb5d5db138
 }
 
 .page-wrapper {
@@ -80,6 +89,7 @@ body{
 
 .btn-custom {
     background-color: #AF6DB3;
+    color: white
 }
 
 .btn-custom:hover {
@@ -88,6 +98,7 @@ body{
 
 .btn-custom-2 {
     background-color: #76B3A6;
+    color: white;
 }
 
 #dirtyBirdImage {
