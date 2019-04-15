@@ -1,15 +1,20 @@
-.form-group {
-  background-color: #8eb381;
-}
+/* @font-face {
+    font-family: "delicious";
+    src: url('../fonts/delicious-webfont.woff');
+} */
 
 .jumbotron {
-  background-color: #8eb381;
+  background-color: lightcyan;
   text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
-h1 {
+
+body{
   font-family: "delicious";
   color: black;
   align-content: center;
+  font-family: 'Karla', sans-serif;
+  height: 100%;
 }
 
 body {
@@ -28,7 +33,7 @@ body {
 
 .cardStyling {
   text-align: center;
-
+  border: none;
 }
 
 #dirtyBirdLogo {
@@ -36,11 +41,28 @@ body {
   max-height: 100%;
 }
 
-#songSearchButton {
-  background-color: black;
+#song-search-form {
+  width: 960px;
 }
 
-#song-search-form {
-  margin-left: 0px;
-  margin-right: 500px;
+#lyrics {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.song-button {
+  border-bottom: 1px solid gray
+}
+
+.page-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#dirtyWordSearchButton {
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 }

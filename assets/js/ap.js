@@ -136,4 +136,15 @@ $(document).on("click", ".song-button", function(event) {
 
   });
 
+  var dirtyWordSearchButton = document.getElementById("dirtyWordSearchButton");
+  var sticky = dirtyWordSearchButton.offsetTop;
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      dirtyWordSearchButton.classList.add("sticky")
+    } else {
+      dirtyWordSearchButton.classList.remove("sticky");
+    }
+  }
+
+
 });
