@@ -41,8 +41,17 @@ body{
 }
 
 #lyrics {
+<<<<<<< HEAD
   line-height: 1.5;
   min-height: 100vh;
+=======
+    line-height: 1.5;
+}
+
+#main-content {
+    min-height: 65vh;
+    background-color: #FFF4CF;
+>>>>>>> e6b6c8b753eaa31a196298987c13bf591eff69f0
 }
 
 .song-button {
@@ -53,7 +62,34 @@ body{
   width: 80%;
   margin: 0 auto;
 }
+<<<<<<< HEAD
 .dirtyBirdImage {
   height: 40%;
   width: 40%;
+=======
+
+.btn-custom {
+    background-color: #AF6DB3;
+}
+
+.btn-custom:hover {
+    background-color: #FBB4FF;
+}
+
+.btn-custom-2 {
+    background-color: #76B3A6;
+}
+
+#dirtyBirdImage {
+    height: 40%;
+    width: 40%;
+}
+
+@media (min-width: 992px) {
+    .collapse.dont-collapse-sm {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+>>>>>>> e6b6c8b753eaa31a196298987c13bf591eff69f0
 }
