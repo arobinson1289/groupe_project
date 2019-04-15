@@ -1,31 +1,46 @@
-
+.form-group {
+  background-color: #8eb381;
+}
 
 .jumbotron {
-    background-color: lightcyan;
-    text-align: center
-
+  background-color: #8eb381;
+  text-align: center;
 }
-body{
-    font-family: "delicious";
-    color: black;
-    align-content: center;
+h1 {
+  font-family: "delicious";
+  color: black;
+  align-content: center;
 }
 
+body {
+  font-family: futura;
+  align-content: center;
+  text-align: center;
+}
 .text-align {
-    text-align: center;
+  text-align: center;
 }
 
 .image-header {
-    height: .05px;
-    width: .05px;
+  height: .05px;
+  width: .05px;
 }
 
 .cardStyling {
-    text-align: center;
+  text-align: center;
 
 }
 
 #dirtyBirdLogo {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#songSearchButton {
+  background-color: black;
+}
+
+#song-search-form {
+  margin-left: 0px;
+  margin-right: 500px;
 }
