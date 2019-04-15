@@ -7,70 +7,68 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Karla|Rubik" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Title</title>
+  <title>Dirty Bird Lyrics</title>
 </head>
 
 <body my-5>
-  <header class="jumbotron jumbotron-fluid">
-    <h1>Dirty Bird Lyrics Dictionary</h1>
-    <p class="text-center">Search For Your Favorite Song To Receive Song Lyrics, and use our Dirty Bird search engine to look up dirty words you find!</p>
+  <header class="jumbotron">
+    <h1 class="display-3">Dirty Bird Lyrics Dictionary</h1>
+    <hr>
+    <h4 class="text-center text-muted">Search For Your Favorite Song To Receive Song Lyrics, and use our Dirty Bird search engine to look up dirty words you find!</h4>
   </header>
     
-  <div class="pagewrapper mx-5">
+  <div class="page-wrapper">
     <!-- Search Forms -->
     <div class="row">
 
-      <!-- Song Search Form -->
-      <div class="col-8">
-        <div class="card cardStyling">
-          <form id="song-search-form">
-            <div class="form-group">
-              <label for="songInput">Search By Song</label>
-              <input id="songInput" class="form-control" type="text">
-            </div>
-            <button type="submit" class="btn btn-primary" id="songSearchButton">Search</button>
-          </form>
-        </div>
+      <!-- Song Buttons -->
+      <div class="col-3">
+        <h2>Song Search</h2>
+        <form id="song-search-form" class="col-12 p-0">
+          <div class="form-group">
+            <label for="songInput">Search By Song</label>
+            <input id="songInput" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn btn-primary col-12" id="songSearchButton">Search</button>
+        </form>
+        <div id="song-buttons"></div>
+      </div>
+
+      <!-- Lyrics -->
+      <div class="col-5 bg-light lyrics">
+        <h2>Instructions</h2>
+        <h3>Search for a song. If you find any dirty words, as the dirty bird to the right what it means!</h3>
+        <h4 id="lyrics" class="text-justify"></h4>
       </div>
 
       <!-- Urban Dictionary Search Form -->
       <div class="col-4">
-        <div class="card cardStyling">
-          <form id="dirty-word-form">
-            <div class="form-group">
-              <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
-              <input id="dirtyWordInput" class="form-control" type="text">
+        <div class="row">
+          <div class="col-12">
+            <div class="card cardStyling">
+              <form id="dirty-word-form">
+                <div class="form-group">
+                  <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
+                  <input id="dirtyWordInput" class="form-control" type="text">
+                </div>
+                <button type="submit" class="btn btn-primary col-6" id="dirtyWordSearchButton">Search</button>
+              </form>
             </div>
-            <button type="submit" class="btn btn-primary" id="dirtyWordSearchButton">Search</button>
-          </form>
+          </div>
+
+          <div class="col-12">
+            <h2>You searched for: <span id="term"></span></h2>
+            <div id="definitions"></div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Lyrics and Search Term Results -->
-    <div class="row mt-5">
-      <!-- Song Buttons Column -->
-      <div class="col-3">
-        <div id="song-buttons"></div>
-      </div>
-
-      <!-- Lyrics Column -->
-      <div class="col-5">
-        <div id="lyrics"></div>
-      </div>
-
-      <!-- Definitions Column -->
-      <div class="col-4">
-        <h3>You searched for: <span id="term"></span></h3>
-        <div id="definitions"></div>
-      </div>
-    </div>
     
   </div>
   
-
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
