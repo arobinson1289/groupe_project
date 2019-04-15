@@ -5,7 +5,7 @@ $("#dirtyWordSearchButton").on("click", function(event) {
 
   var word = $("#dirtyWordInput").val();
   
-  $("#term").text(`"${word}"`);
+  $("#search-term").text(`You searched for: "${word}"`);
   
   var queryURL = "https://alex-rosencors.herokuapp.com?url=https://urbanscraper.herokuapp.com/search/" + word;
   
@@ -20,7 +20,7 @@ $("#dirtyWordSearchButton").on("click", function(event) {
       
       // create a definition div
       $definitionCard = $("<div>")
-        .addClass("card mb-3")
+        .addClass("card mb-4")
   
       $cardBody = $("<div>")
         .addClass("card-body")
@@ -28,11 +28,11 @@ $("#dirtyWordSearchButton").on("click", function(event) {
       // grab the definition
       var $definition = $("<h5>")
         .addClass("card-subtitle definition")
-        .text((i + 1) + ")   Definition: " + response[i].definition);
+        .html((i + 1) + ")  Definition: " + response[i].definition);
   
       // grab example
       var $example = $("<p>")
-        .addClass("card-text example")
+        .addClass("card-text example mt-2")
         .text("Example: " + response[i].example);
   
       // append to $definitionDiv
@@ -58,7 +58,6 @@ $("#songSearchButton").on("click",  function(event) {
   event.preventDefault();
 
   var song = $("#songInput").val();
-
 
   var apiKey = "f64fe601571e8c26f4b0845395793cff";
   
@@ -104,6 +103,7 @@ $("#songSearchButton").on("click",  function(event) {
   // Clear everything
   $("#song-buttons").empty();
   $("#songInput").val("");
+  $("#instructions").empty();
   $("#lyrics").empty();
 
 });
@@ -111,8 +111,6 @@ $("#songSearchButton").on("click",  function(event) {
 $(document).on("click", ".song-button", function(event) {
   
   event.preventDefault();
-
-  $("#lyrics").empty()
 
   var trackId = $(this).attr("data-trackId");
   console.log(trackId)
