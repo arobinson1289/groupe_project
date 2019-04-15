@@ -55,6 +55,7 @@ body {
 }
 
 .page-wrapper {
+<<<<<<< HEAD
   width: 80%;
   margin: 0 auto;
 }
@@ -65,4 +66,12 @@ body {
     top: 0;
     width: 100%;
   }
+=======
+    width: 80%;
+    margin: 0 auto;
+}
+#dirtyBirdImage {
+    height: 40%;
+    width: 40%;
+>>>>>>> 659ec048cce5e6d83602c61599d5128e060c1e3e
 }
