@@ -8,11 +8,13 @@
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
+
 body{
     font-family: "delicious";
     color: black;
     align-content: center;
     font-family: 'Karla', sans-serif;
+    height: 100%;
 }
 
 .text-align {
@@ -26,7 +28,7 @@ body{
 
 .cardStyling {
     text-align: center;
-
+    border: none;
 }
 
 #dirtyBirdLogo {
@@ -40,8 +42,14 @@ body{
 
 #lyrics {
     line-height: 1.5;
+    min-height: 100vh;
 }
 
 .song-button {
     border-bottom: 1px solid gray
+}
+
+.page-wrapper {
+    width: 80%;
+    margin: 0 auto;
 }
