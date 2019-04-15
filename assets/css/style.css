@@ -44,7 +44,7 @@ body{
     line-height: 1.5;
 }
 
-.main-content {
+#main-content {
     min-height: 65vh;
     background-color: #FFF4CF;
 }
@@ -70,7 +70,19 @@ body{
     background-color: #FBB4FF;
 }
 
+.btn-custom-2 {
+    background-color: #76B3A6;
+}
+
 #dirtyBirdImage {
     height: 40%;
     width: 40%;
+}
+
+@media (min-width: 992px) {
+    .collapse.dont-collapse-sm {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
 }
