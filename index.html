@@ -19,15 +19,19 @@
   </header>
     
   <div class="page-wrapper">
+
     <!-- Search Forms -->
     <div class="row">
 
       <!-- Song Buttons -->
-      <div class="col-12 col-lg-3">
-        <h2>Song Search</h2>
+      <!-- Button for Song-Search -->
+      <button class="col-12 btn btn-custom-2 d-block d-lg-none my-3" type="button" data-toggle="collapse" data-target="#song-search" aria-expanded="false" aria-controls="song-search">Search Song</button>
+
+      <div id="song-search" class="col-12 col-lg-3 collapse dont-collapse-sm">
+        <!-- <h2>Song Search</h2> -->
         <form id="song-search-form" class="col-12 p-0">
           <div class="form-group">
-            <label for="songInput">Search By Song</label>
+            <label for="songInput" style="font-size:20px">Search By Song</label>
             <input id="songInput" class="form-control" type="text">
           </div>
           <button type="submit" class="btn btn-custom col-12" id="songSearchButton">Search</button>
@@ -36,8 +40,11 @@
       </div>
 
       <!-- Lyrics -->
-      <div class="col-12 col-lg-6 main-content">
-        <div id="instructions" class="text-center">
+      <!-- Button for Lyrics -->
+      <button class="col 12 btn btn-custom-2 d-block d-lg-none my-3" type="button" data-toggle="collapse" data-target="#main-content" aria-expanded="false" aria-controls="main-content">Song Lyrics</button>
+
+      <div id="main-content" class="col-12 col-lg-6 collapse dont-collapse-sm">
+        <div id="instructions" class="text-center d-none d-lg-block">
           <h2 class="mt-3 display-4 text-uppercase">Instructions</h2>
           <br><br>
           <h3><i class="fas fa-chevron-circle-left"></i> Search for your favorite song to receive song lyrics.</h3>
@@ -48,14 +55,17 @@
       </div>
 
       <!-- Urban Dictionary Search Form -->
-      <div class="col-12 col-lg-3">
+      <!-- Button for Dirty Word Search -->
+    <button class="col-12 btn btn-custom-2 d-block d-lg-none my-3" type="button" data-toggle="collapse" data-target="#dirty-word-search" aria-expanded="false" aria-controls="dirty-word-search">Search For A Dirty Word</button>
+    
+      <div id="dirty-word-search" class="col-12 col-lg-3 collapse dont-collapse-sm">
         <div class="row">
           <div class="col-12">
             <div class="card cardStyling">
               <form id="dirty-word-form">
                 <div class="form-group">
                   <img id="dirtyBirdImage" src="assets/images/dirtybird.png" alt="Dirty Bird Logo" class="mb-3">
-                  <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
+                  <label for="dirtyWordInput" style="font-size:20px">Ask Dirty Bird About A Dirty Word</label>
                   <input id="dirtyWordInput" class="form-control" type="text">
                 </div>
                 <button type="submit" class="btn btn-custom col-12" id="dirtyWordSearchButton">Search</button>
