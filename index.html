@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Title</title>
+  <title>Dirty Bird Lyrics</title>
 </head>
 <body my-5>
   <header class="jumbotron jumbotron-fluid">
@@ -48,6 +48,14 @@
     <div class="row m˜t-5">
       <!-- Song Buttons Column -->
       <div class="col-3">
+        <h2>Song Search</h2>
+        <form id="song-search-form" class="col-12 p-0">
+          <div class="form-group">
+            <label for="songInput">Search By Song</label>
+            <input id="songInput" class="form-control" type="text">
+          </div>
+          <button type="submit" class="btn btn-primary col-12" id="songSearchButton">Search</button>
+        </form>
         <div id="song-buttons"></div>
       </div>
       <!-- Lyrics Column -->
@@ -56,10 +64,27 @@
       </div>
       <!-- Definitions Column -->
       <div class="col-4">
-        <h3>You searched for: <span id="term"></span></h3>
-        <div id="definitions"></div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card cardStyling">
+              <form id="dirty-word-form">
+                <div class="form-group">
+                  <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
+                  <input id="dirtyWordInput" class="form-control" type="text">
+                </div>
+                <button type="submit" class="btn btn-primary col-6" id="dirtyWordSearchButton">Search</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <h2>You searched for: <span id="term"></span></h2>
+            <div id="definitions"></div>
+          </div>
+        </div>
       </div>
     </div>
+
     
   </div>
   
