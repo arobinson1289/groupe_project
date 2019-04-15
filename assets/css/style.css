@@ -4,15 +4,9 @@
 } */
 
 .jumbotron {
-<<<<<<< HEAD
   background-color: lightcyan;
   text-align: center;
   font-family: 'Rubik', sans-serif;
-=======
-    background-color: #7CCCBC;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
->>>>>>> 73c8e4c8a96e3f258e65301836a51d4cc4f95e68
 }
 
 body{
@@ -23,11 +17,6 @@ body{
   height: 100%;
 }
 
-body {
-  font-family: futura;
-  align-content: center;
-  text-align: center;
-}
 .text-align {
   text-align: center;
 }
@@ -52,17 +41,8 @@ body {
 }
 
 #lyrics {
-<<<<<<< HEAD
   line-height: 1.5;
   min-height: 100vh;
-=======
-    line-height: 1.5;
-}
-
-.main-content {
-    min-height: 65vh;
-    background-color: #FFF4CF;
->>>>>>> 73c8e4c8a96e3f258e65301836a51d4cc4f95e68
 }
 
 .song-button {
@@ -70,36 +50,10 @@ body {
 }
 
 .page-wrapper {
-<<<<<<< HEAD
   width: 80%;
   margin: 0 auto;
 }
-
-#dirtyWordSearchButton {
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-=======
-    width: 80%;
-    margin: 0 auto;
-}
-
-.card {
-    border: none;
-}
-
-.btn-custom {
-    background-color: #AF6DB3;
-}
-
-.btn-custom:hover {
-    background-color: #FBB4FF;
-}
-
-#dirtyBirdImage {
-    height: 40%;
-    width: 40%;
->>>>>>> 659ec048cce5e6d83602c61599d5128e060c1e3e
+.dirtyBirdImage {
+  height: 40%;
+  width: 40%;
 }
