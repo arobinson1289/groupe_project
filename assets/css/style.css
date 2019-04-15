@@ -63,5 +63,14 @@ body{
 }
 
 .btn-custom {
-    background-color: #FBB5FF
+    background-color: #AF6DB3;
+}
+
+.btn-custom:hover {
+    background-color: #FBB4FF;
+}
+
+#dirtyBirdImage {
+    height: 40%;
+    width: 40%;
 }
