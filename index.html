@@ -14,9 +14,8 @@
 
 <body my-5>
   <header class="jumbotron">
-    <h1 class="display-3">Dirty Bird Lyrics Dictionary</h1>
-    <hr>
-    <h4 class="text-center text-muted">Search For Your Favorite Song To Receive Song Lyrics, and use our Dirty Bird search engine to look up dirty words you find!</h4>
+    <h1 class="display-2">Dirty Bird Lyrics</h1>
+    <hr class="col-4">
   </header>
     
   <div class="page-wrapper">
@@ -24,27 +23,32 @@
     <div class="row">
 
       <!-- Song Buttons -->
-      <div class="col-3">
+      <div class="col-12 col-lg-3">
         <h2>Song Search</h2>
         <form id="song-search-form" class="col-12 p-0">
           <div class="form-group">
             <label for="songInput">Search By Song</label>
             <input id="songInput" class="form-control" type="text">
           </div>
-          <button type="submit" class="btn btn-primary col-12" id="songSearchButton">Search</button>
+          <button type="submit" class="btn btn-custom col-12" id="songSearchButton">Search</button>
         </form>
         <div id="song-buttons"></div>
       </div>
 
       <!-- Lyrics -->
-      <div class="col-5 bg-light lyrics">
-        <h2>Instructions</h2>
-        <h3>Search for a song. If you find any dirty words, as the dirty bird to the right what it means!</h3>
-        <h4 id="lyrics" class="text-justify"></h4>
+      <div class="col-12 col-lg-6 main-content">
+        <div id="instructions" class="text-center">
+          <h2 class="mt-3 display-4 text-uppercase">Instructions</h2>
+          <br><br>
+          <h3><i class="fas fa-chevron-circle-left"></i> Search for your favorite song to receive song lyrics.</h3>
+          <br><br>
+          <h3></i>Ask the Dirty Bird to look up dirty words you find!  <i class="fas fa-chevron-circle-right ml-2"></i></h3>
+        </div>
+        <h4 id="lyrics" class="text-justify mt-3"></h4>
       </div>
 
       <!-- Urban Dictionary Search Form -->
-      <div class="col-4">
+      <div class="col-12 col-lg-3">
         <div class="row">
           <div class="col-12">
             <div class="card cardStyling">
@@ -53,13 +57,13 @@
                   <label for="dirtyWordInput">Ask Dirty Bird About A Dirty Word</label>
                   <input id="dirtyWordInput" class="form-control" type="text">
                 </div>
-                <button type="submit" class="btn btn-primary col-6" id="dirtyWordSearchButton">Search</button>
+                <button type="submit" class="btn btn-custom col-12" id="dirtyWordSearchButton">Search</button>
               </form>
             </div>
           </div>
 
-          <div class="col-12">
-            <h2>You searched for: <span id="term"></span></h2>
+          <div class="col-12 mt-4">
+            <h2 id="search-term" class="mb-4"></h2>
             <div id="definitions"></div>
           </div>
         </div>

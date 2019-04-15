@@ -4,7 +4,7 @@
 } */
 
 .jumbotron {
-    background-color: lightcyan;
+    background-color: #7CCCBC;
     text-align: center;
     font-family: 'Rubik', sans-serif;
 }
@@ -42,7 +42,11 @@ body{
 
 #lyrics {
     line-height: 1.5;
-    min-height: 100vh;
+}
+
+.main-content {
+    min-height: 65vh;
+    background-color: #FFF4CF;
 }
 
 .song-button {
@@ -52,4 +56,12 @@ body{
 .page-wrapper {
     width: 80%;
     margin: 0 auto;
+}
+
+.card {
+    border: none;
+}
+
+.btn-custom {
+    background-color: #FBB5FF
 }
